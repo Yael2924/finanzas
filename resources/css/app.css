@@ -8,4 +8,209 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Utilidades de Tailwind v4 conectadas a la paleta global. */
+  --color-color-1: var(--color-1);
+  --color-color-2: var(--color-2);
+  --color-color-3: var(--color-3);
+  --color-color-4: var(--color-4);
+  --color-color-5: var(--color-5);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-background: var(--background);
+  --color-text: var(--text);
+}
+
+/* Paleta global: cambia estos valores para actualizar todo el sistema. */
+:root {
+  /* Vibrante Laguna Turquesa */
+  --color-1: #2D6A4F;
+  --color-2: #40916C;
+  --color-3: #52B788;
+  --color-4: #74C69D;
+  --color-5: #B7E4C7;
+
+  /* Semantic colors */
+  --primary: #2D6A4F;
+  --secondary: #40916C;
+  --accent: #52B788;
+  --background: #74C69D;
+  --text: #B7E4C7;
+
+  /* Override para la plantilla Spark Admin */
+  --bs-body-bg: #f5faf7;
+  --bs-body-color: var(--primary);
+  --brand-forest-dark: var(--color-1);
+  --brand-forest-medium: var(--color-2);
+  --brand-forest-light: var(--color-3);
+  --brand-lime: var(--color-3);
+  --brand-lime-hover: var(--color-4);
+  --brand-lime-translucent: rgba(82, 183, 136, 0.18);
+  --text-main: var(--color-1);
+  --text-muted-green: var(--color-2);
+  --text-sidebar-muted: #d9f4e5;
+  --card-background: #ffffff;
+  --border-light: rgba(45, 106, 79, 0.12);
+  --border-dark-green: rgba(255, 255, 255, 0.12);
+  --sys-green: var(--color-2);
+  --sys-green-bg: rgba(64, 145, 108, 0.12);
+  --sys-red: #d9534f;
+  --sys-red-bg: rgba(217, 83, 79, 0.1);
+  --sys-orange: var(--color-4);
+  --sys-orange-bg: rgba(116, 198, 157, 0.15);
+}
+
+body {
+  background: linear-gradient(180deg, var(--color-5) 0%, #f5faf7 100%);
+  color: var(--text-main);
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.9;
+}
+
+.sidebar-wrapper,
+.sidebar-menu-link.active,
+.navbar-custom,
+.card,
+.promo-banner-card,
+.btn-date-picker,
+.btn-quick-action,
+.navbar-action-btn,
+.navbar-profile-btn,
+.alert-green-card,
+.card-stat,
+.right-panel-wrapper {
+  box-shadow: 0 10px 30px rgba(45, 106, 79, 0.08);
+}
+
+.sidebar-wrapper {
+  background: linear-gradient(180deg, var(--color-1) 0%, var(--color-2) 100%);
+}
+
+.sidebar-menu-link.active {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-menu-link.active::before {
+  background-color: var(--color-5);
+}
+
+.navbar-custom,
+.navbar-profile-btn,
+.btn-date-picker,
+.btn-quick-action,
+.card,
+.alert-green-card,
+.promo-banner-card {
+  background-color: rgba(255, 255, 255, 0.92);
+}
+
+.alert-green-card {
+  background: linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%);
+  color: #fff;
+}
+
+.alert-green-card .alert-green-link,
+.alert-green-card .alert-green-date,
+.alert-green-card .alert-green-text,
+.alert-green-card .alert-green-badge {
+  color: #fff;
+}
+
+.chart-legend-item .legend-dot.bg-lime-accent,
+.progress-bar.bg-lime-accent,
+.notification-icon.bg-success,
+.transaction-icon.bg-forest-light,
+.text-lime {
+  background-color: var(--color-3) !important;
+  color: #fff !important;
+}
+
+.bg-forest-medium,
+.bg-forest-light {
+  background-color: var(--color-2) !important;
+}
+
+.bg-brand-orange {
+  background-color: var(--color-4) !important;
+}
+
+.text-success {
+  color: var(--color-1) !important;
+}
+
+.stat-value,
+.stat-value-amount,
+.page-title,
+.card-title {
+  color: var(--primary) !important;
+}
+
+.footer-custom {
+  background: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid var(--border-light);
+}
+
+.dropdown-menu-custom,
+.dropdown-menu-profile,
+.dropdown-menu-quick-action,
+.dropdown-menu-notification {
+  border: 1px solid var(--border-light);
+  box-shadow: 0 16px 32px rgba(45, 106, 79, 0.12);
+}
+
+.btn-promo,
+.btn-date-picker,
+.btn-quick-action,
+.navbar-action-btn,
+.navbar-profile-btn,
+.card-more-btn,
+.navbar-search-btn {
+  border: 1px solid rgba(45, 106, 79, 0.08);
+}
+
+.btn-promo,
+.btn-quick-action,
+.navbar-action-btn:hover,
+.navbar-profile-btn:hover,
+.card-more-btn:hover {
+  background-color: var(--color-5);
+  color: var(--color-1);
+}
+
+.btn-promo {
+  background: linear-gradient(135deg, var(--color-3) 0%, var(--color-2) 100%);
+  color: #fff;
+}
+
+.navbar-search-input:focus,
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-3);
+  box-shadow: 0 0 0 0.2rem rgba(82, 183, 136, 0.18);
+}
+
+.table thead th,
+.table tbody td {
+  color: var(--color-1);
+}
+
+.table tbody tr:hover {
+  background-color: rgba(116, 198, 157, 0.08);
+}
+
+@media (max-width: 1199.98px) {
+  .sidebar-wrapper {
+    background: linear-gradient(180deg, var(--color-1) 0%, var(--color-2) 100%);
+  }
 }
